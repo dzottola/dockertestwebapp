@@ -12,6 +12,7 @@ services:
       - front-tier
       - back-tier
 
+
   result:
     build: ./result
     command: nodemon server.js
