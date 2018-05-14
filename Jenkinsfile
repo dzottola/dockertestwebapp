@@ -16,7 +16,7 @@ node('docker-agent') {
             }
 
           	stage('Docker deploy') {
-                sh "docker-compose up build"
+                sh "docker-compose up --build"
             }
 
         } finally {
