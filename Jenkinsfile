@@ -18,3 +18,4 @@ node('docker-agent') {
         }
     }
 }
+}
