@@ -6,11 +6,10 @@ node('docker-agent') {
             }
 
 			stage('Docker deploy') {
-                sh "docker-compose up"
+                sh "docker-compose up --build"
             }
 
         } finally {
-            cleanWs notFailBuild: false
         }
     }
 }
