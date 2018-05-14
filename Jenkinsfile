@@ -12,6 +12,10 @@ node('docker-agent') {
 
                 stage('clean up') {sh "docker container rm build_and_run_webapp_container_vote_1 build_and_run_webapp_container_result_1 redis db"}
 
+docker image  rm -f microsoft/dotnet build_and_run_webapp_container_vote build_and_run_webapp_container_result build_and_run_webapp_container_worker postgres redis node
+
+
+
                 stage('Docker deploy') {sh "docker-compose up --build"}
 
 
